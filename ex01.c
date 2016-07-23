@@ -1,4 +1,7 @@
-/* Primeiro Exercício do Project Euler*/
+/* Primeiro Exercício do Project Euler
+ * Autor: José Marcos de Lira Júnior
+ *
+ * Programa que deve calcular a soma dos numeros que sao multiplos de 3 e 5 abaixo de 1000*/
 
 #include <stdlib.h>
 #include <stdio.h>
