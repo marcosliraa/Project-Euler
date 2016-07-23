@@ -3,17 +3,27 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int processo();
+
 int main(void)
 {
-    int soma,i;
-    soma=0;
-    for(i=1;i<11;i++)
-    {
-        if((i%3==0) ||(i%5==0))
-            soma= soma + i;
-        i++;
-    }
-    
-    printf("%d\n",soma);
+    int resultado;
+
+    resultado = processo();
+    printf("%d\n",resultado);
+
     return 0;
+}
+
+int processo()
+{
+    int soma, i;
+    soma = 0;
+    for(i=1;i<1000;i++)
+    {
+        if((i%3==0) || (i%5==0))
+            soma = soma + i;
+    }
+
+    return soma;
 }
