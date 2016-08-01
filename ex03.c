@@ -11,7 +11,7 @@ int main()
 {
     int primo, i;
 
-    for(i=3;i<=MAX;i=i+2)
+    for(i=3;i<MAX;i=i+2)
     {
         if(MAX % i ==0)
             primo = i;
