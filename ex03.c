@@ -3,19 +3,30 @@
  */
 
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
-
-#define MAX 600851475143
-
-int main()
+int main(void)
 {
-    int primo, i;
-
-    for(i=3;i<MAX;i=i+2)
+    long largestprime=0, i,j;
+    const long max = 600851475143;
+    for(i=3;i<max;i=i++)
     {
-        if(MAX % i ==0)
-            primo = i;
+        if(max % i ==0)
+        {
+            bool prime=true;
+            for(j=2;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                    prime=false;
+                    break;
+                }
+            }
+            if(prime)
+                largestprime=i;
+        }
     }
-    printf("%d",primo);
+    printf("%ld\n",largestprime);
+    
     return 0;
 }

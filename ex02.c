@@ -20,7 +20,7 @@ int main()
         j=fib;
     }
 
-    printf("\n%d\n",soma);
+    printf("%d\n",soma);
 
     return 0;
 }
