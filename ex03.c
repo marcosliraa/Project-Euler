@@ -4,29 +4,38 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#include <stdlib.h>
+
 int main(void)
 {
-    long largestprime=0, i,j;
+    long largestprime=0, i=3,div,j;
     const long max = 600851475143;
-    for(i=3;i<max;i=i++)
+    
+   div = max;
+   while(div!=1)
     {
-        if(max % i ==0)
+        if(div%i==0)
         {
-            bool prime=true;
-            for(j=2;j<i;j++)
+            bool istrue=true;
+            for(j=3;j<i;j++)
             {
                 if(i%j==0)
                 {
-                    prime=false;
+                    istrue=false;
                     break;
                 }
             }
-            if(prime)
+            if(istrue)
+            {
                 largestprime=i;
+            }
         }
+        while(div%i==0)
+        {
+            div= div/i;
+        }
+        if(div%i!=0)
+            i=i+2;
     }
-    printf("%ld\n",largestprime);
-    
-    return 0;
+   printf("%ld\n",largestprime);
+   return 0;
 }
