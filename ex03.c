@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    long largestprime=0, i=3,div,j;
+    long largestprime=0, i=2,div,j;
     const long max = 600851475143;
     
    div = max;
@@ -16,7 +16,7 @@ int main(void)
         if(div%i==0)
         {
             bool istrue=true;
-            for(j=3;j<i;j++)
+            for(j=2;j<i;j++)
             {
                 if(i%j==0)
                 {
@@ -34,7 +34,7 @@ int main(void)
             div= div/i;
         }
         if(div%i!=0)
-            i=i+2;
+            i=i+1;
     }
    printf("%ld\n",largestprime);
    return 0;
