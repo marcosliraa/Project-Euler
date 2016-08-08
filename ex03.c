@@ -1,6 +1,7 @@
 /* Programa 3 do Project Euler
  * Autor: José Marcos de Lira Júnior
- */
+   Alterando besteiras
+*/
 
 #include <stdio.h>
 #include <stdbool.h>
